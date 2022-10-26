@@ -47,13 +47,15 @@ filter exsisting posts
 
 ## Credits
 
-Collaborators:
+(#Collaborators:)
 
 Will: https://github.com/ramosw1993
 
 Pak: https://github.com/paksin
 
 Hannah: https://github.com/hannahhue
+
+(#Sources:)
 
 Node.js library: https://www.passportjs.org/
 
