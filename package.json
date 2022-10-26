@@ -1,0 +1,29 @@
+{
+  "name": "get-a-job",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramosw1993/Project-2-temp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramosw1993/Project-2-temp/issues"
+  },
+  "homepage": "https://github.com/ramosw1993/Project-2-temp#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "node": "^19.0.0",
+    "passport": "^0.6.0",
+    "sequelize": "^6.25.3"
+  }
+}
