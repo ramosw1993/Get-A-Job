@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS getajob_db;
+CREATE DATABASE getajob_db;
