@@ -1,5 +1,5 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Sequelize, Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Description extends Model {}
 
@@ -23,15 +23,15 @@ Description.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
     post_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
-        key: 'id',
+        model: "post",
+        key: "id",
       },
     },
   },
@@ -40,7 +40,7 @@ Description.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'description',
+    modelName: "description",
   }
 );
 
