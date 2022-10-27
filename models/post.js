@@ -1,9 +1,9 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Sequelize, DataTypes, Model } = require("sequelize");
+const sequelize = require("../config/connection");
 
-class Dashboard extends Model {}
+class Post extends Model {}
 
-Dashboard.init(
+Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,37 +11,34 @@ Dashboard.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        user: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        jobTitle: {
-            type: DataTypes.STRING,
+        date_created: {
+            type: DataTypes.DATE,
             allowNull: false,
+            defaultValue: DataTypes.NOW,
         },
-        city: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        review: {
+        description: {
             type: DataTypes.TEXT,
             allowNull: false,
-        },
-        starRating: {
-            type: DataTypes.CHAR,
-            allowNull: false,
-            validate: {
-                len: [5],
-            },
         },
         pay: {
             type: DataTypes.INTEGER,
             allowNull: true,
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Dashboard',
-    }
+        modelName: 'post',
+    },
 );
