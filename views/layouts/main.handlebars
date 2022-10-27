@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- link style --}}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    {{!-- tab title --}}
     <title>Get A Job!</title>
   </head>
 
@@ -16,7 +23,7 @@
     <header class="display-flex justify-space-between align-center p-2">
       <!-- nav based on logged in/out -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Tech Blog</a>
+        <a class="navbar-brand" href="#">Get A Job</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -50,12 +57,12 @@
         </div>
       </nav>
     </header>
-    {{!  }}
+    {{! renders body }}
     <main class="container container-fluid mt-5">
       {{{body}}}
     </main>
     <div>
-      {{!  }}
+      {{! logout btns }}
       {{#if logged_in}}
         <script src="/js/logout.js"></script>
       {{/if}}
