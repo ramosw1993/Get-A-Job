@@ -11,14 +11,6 @@ router.get("/login", (req, res) => {
     res.redirect("/dashboard");
     return;
   }
-
-
-function startHome() {
-  res.render("homepage");
-}
-
-startHome();
-
   res.render("login");
 });
 
