@@ -1,9 +1,9 @@
+const router = require("express").Router();
 
-function homeRoutes(test) {
-     test = "welcome"
-    return console.log(test);
+function startHome() {
+  res.render("homepage");
 }
 
-homeRoutes();
+startHome();
 
 module.exports = homeRoutes;
