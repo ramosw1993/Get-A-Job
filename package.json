@@ -28,6 +28,7 @@
     "mysql2": "^2.3.3",
     "node": "^19.0.0",
     "passport": "^0.6.0",
+    "passport-google-oidc": "^0.1.0",
     "sequelize": "^6.25.3"
   }
 }
