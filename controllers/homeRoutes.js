@@ -12,6 +12,13 @@ router.get("/login", (req, res) => {
     return;
   }
 
+
+function startHome() {
+  res.render("homepage");
+}
+
+startHome();
+
   res.render("login");
 });
 
