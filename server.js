@@ -5,6 +5,7 @@ const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 const routes = require("./controllers");
 const mysql = require("mysql2");
+var passport = require("passport");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -29,8 +30,10 @@ const sess = {
     db: sequelize,
   }),
 };
-
 app.use(session(sess));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
