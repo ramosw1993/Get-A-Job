@@ -15,7 +15,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    currentJob: {
+    current_job: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "N/A",
