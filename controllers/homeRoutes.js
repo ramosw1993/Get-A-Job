@@ -14,7 +14,7 @@ passport.use(
       callbackURL: "http://localhost:3001/google/callback",
       passReqToCallback: true,
     },
-    async function (request, accessToken, refreshToken, profile, done) {
+    async function (req, res, accessToken, refreshToken, profile, done) {
       try {
         const userData = await User.findOne({
           where: { email: profile.email },
