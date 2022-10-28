@@ -20,15 +20,16 @@ passport.use(
           where: { email: profile.email },
         });
         if (!userData) {
-          await User.create({
+          userData = await User.create({
             name: profile.displayName,
             email: profile.email,
           });
           console.log("New user created.");
         }
+        console.log(userData);
         console.log(profile.displayName);
         console.log(profile.email);
-        return done(null, profile);
+        return done(null, userData);
       } catch (err) {
         res.status(400).json(err);
       }
@@ -37,6 +38,7 @@ passport.use(
 );
 
 passport.serializeUser(function (user, done) {
+  console.log(user);
   done(null, user);
 });
 
@@ -51,6 +53,7 @@ router.get("/login", (req, res) => {
     return;
   }
   res.render("login");
+  console.log(req.user);
 });
 
 router.get(
@@ -71,7 +74,7 @@ router.get("/auth/failure", (req, res) => {
 });
 
 router.get("/auth", withAuth, (req, res) =>
-  res.send(`Hello ${req.user.displayName}`)
+  res.send(`Hello ${req.user.name}, ${req.user.id}`)
 );
 
 router.get("/logout", function (req, res, next) {
