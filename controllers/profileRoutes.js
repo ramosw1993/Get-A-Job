@@ -8,10 +8,18 @@ router.get("/", withAuth, async (req, res) => {
     const userPosts = await Post.findAll({
       where: { user_id: req.user.id },
       raw: true,
+      nest: true,
+      include: [
+        {
+          model: User,
+          attributes: ["name", "profilePic"],
+        },
+      ],
     });
     console.log(userPosts);
     res.render("profile", {
       userPosts,
+
       user_id: req.user.id,
     });
   } catch (err) {
