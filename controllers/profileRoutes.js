@@ -1,37 +1,21 @@
 const router = require("express").Router();
-const { Comment, Post, User } = require("../models");
+const { Post, User } = require("../models");
 const { findAll } = require("../models/User");
 const withAuth = require("../utils/auth");
 
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
-      raw: true,
-      nest: true,
-    });
-
-    const commentData = await Comment.findAll({
-      where: {
-        post_id: req.params.id,
-      },
+    const userPosts = await Post.findAll({
+      where: { user_id: req.session.user_id },
       raw: true,
     });
-
-    console.log(postData, commentData);
-
-    res.render("postdetail", {
-      commentData,
-      postData,
-      logged_in: req.session.logged_in,
+    console.log(userPosts);
+    res.render("profile", {
+      userPosts,
+      user_id: req.session.user_id,
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
