@@ -23,6 +23,7 @@ passport.use(
           userData = await User.create({
             name: profile.displayName,
             email: profile.email,
+            profilePic: profile.picture,
           });
           console.log("New user created.");
         }
@@ -69,8 +70,8 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/auth",
-    failureRedirect: "auth/failure",
+    successRedirect: "/",
+    failureRedirect: "/auth/failure",
   })
 );
 
