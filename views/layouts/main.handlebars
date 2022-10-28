@@ -40,10 +40,11 @@
               {{#if logged_in}}
             <li class="nav-item">
                 <nav>
-                  <button class="btn" id="logout">logout</button>
+                  <a class="nav-link" href="/logout">Logout
+                <span class="sr-only">(current)</span></a>
                 </nav>
                 {{else}}
-                <a class="nav-link" href="#">Login
+                <a class="nav-link" href="/login">Login
                 <span class="sr-only">(current)</span></a>
             </li>
               {{/if}}
