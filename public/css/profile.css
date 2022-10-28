@@ -3,6 +3,11 @@ body{
     margin-top:20px;
     background:#DCDCDC;
 }
+
+.container {
+    padding-top: 20px;
+}
+
 .content {
     padding: 35px 0px;
 }
