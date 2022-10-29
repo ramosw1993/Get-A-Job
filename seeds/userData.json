@@ -1,14 +1,14 @@
 [
     {
         "name": "Hannah",
-        "currentJob": "Mechanic",
-        "profilePic": "https://www.mintface.xyz/content/images/2021/08/QmTndiF423kjdXsNzsip1QQkBQqDuzDhJnGuJAXtv4XXiZ-1.png",
+        "current_job": "Mechanic",
+        "profile_pic": "https://www.mintface.xyz/content/images/2021/08/QmTndiF423kjdXsNzsip1QQkBQqDuzDhJnGuJAXtv4XXiZ-1.png",
         "email": "alicia9790972@gmail.com"
     },
     {
         "name": "gabbi",
-        "currentJob": "artist",
-        "profilePic": "http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/baf7f39b67f8007.png",
+        "current_job": "artist",
+        "profile_pic": "http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/baf7f39b67f8007.png",
         "email": "gabbi@gmail.com"
     }
 ]

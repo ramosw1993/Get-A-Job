@@ -20,7 +20,7 @@ router.get("/", withAuth, async (req, res) => {
         // },
         {
           model: User,
-          attributes: ["name", "profilePic", "currentJob"],
+          attributes: ["name", "profile_pic", "current_job"],
         },
       ],
     });

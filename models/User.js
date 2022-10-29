@@ -20,7 +20,7 @@ User.init(
       allowNull: false,
       defaultValue: "N/A",
     },
-    profilePic: {
+    profile_pic: {
       type: DataTypes.STRING,
       allowNull: false,
     },

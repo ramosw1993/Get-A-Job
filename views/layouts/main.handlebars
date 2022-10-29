@@ -53,7 +53,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dashboard">Dashboard</a>
+              <a class="nav-link" href="/dashboard">Feed</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/profile">Profile</a>
@@ -66,5 +66,11 @@
     <main class="container container-fluid mt-5">
       {{{body}}}
     </main>
+    <div>
+      {{! logout btns }}
+      {{#if logged_in}}
+        <script src="/js/logout.js"></script>
+      {{/if}}
+    </div>
   </body>
 </html>
