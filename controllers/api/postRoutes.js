@@ -1,29 +1,17 @@
 const router = require("express").Router();
-const { User, Post, Comment } = require("../../models");
+const { User, Post, Comment } = require("../../models/Post");
 const withAuth = require("../../utils/auth");
 
-// gets post by id
-router.get("/:id", withAuth, async (req, res) => {
+// get one post
+router.get('/:id', async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-        {
-          model: Comment,
-          include: [User],
-        },
-      ],
-    });
+    const postData = await Post.findByPk(req.params.id);
 
-    const post = postData.get({ plain: true });
+    const onePost = postData.get({ plain:true });
 
-    res.render("post", {
-      ...post,
-    });
+    res.render('onePost', { onePost });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -31,18 +19,44 @@ router.get("/:id", withAuth, async (req, res) => {
 // create new post
 router.post("/", withAuth, async (req, res) => {
   try {
-    const newPost = await Post.create({
+    const createdPost = await Post.create({
       title: req.body.title,
       description: req.body.description,
+      pay: req.body.pay,
+      dateCreated: req.body.dateCreated,
       userId: req.session.userId,
     });
-    res.status(200).json(newPost);
+    res.status(200).json(createdPost);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-//delete a post
+//update post
+router.put('/:id', async (req,res) => {
+  try {
+  const post = await Post.update(
+    {
+    title: req.body.title,
+      description: req.body.description,
+      pay: req.body.pay,
+      dateCreated: req.body.dateCreated,
+      userId: req.session.userId,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.status(200).json(dish);
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+
+
+//delete post
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({
