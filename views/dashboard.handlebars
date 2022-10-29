@@ -4,27 +4,27 @@
     <br />
     <br />
     <h4 class="lead">Welcome,
-      {{name}}. Please fill out the form in order to create a post.</h4>
+      {{this.user.name}}. Please fill out the form in order to create a post.</h4>
   </div>
 </div>
 <br />
 <form class="new-post">
   <div class="form-group">
-    <label for="formGroupExampleInput", "post-title">Title:</label>
+    <label for="post-title">Title:</label>
     <input
       type="text"
-      class="form-control"
-      id="formGroupExampleInput", "post-title"
+      class="form-control", "formGroupExampleInput"
+      id="post-title"
       name="post-title"
       placeholder="Please enter the Title of the post."
     />
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2", "post-description">Description:</label>
+    <label for="post-description">Description:</label>
     <input
       type="text"
-      class="form-control"
-      id="formGroupExampleInput2", "post-description"
+      class="form-control", "formGroupExampleInput2"
+      id="post-description"
       name="post-description"
       placeholder="Please enter a description."
     />
@@ -34,7 +34,7 @@
       <input type="text" class="form-control" placeholder="Pay" id="post-pay" name="post-pay"/>
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Date" id="post-date" name="post-pay"/>
+      {{!-- <input type="text" class="form-control" placeholder="Date" id="post-date" name="post-pay"/> --}}
     </div>
   </div>
   <div class="form-group row">
@@ -86,4 +86,4 @@
   </div>
 {{/each}}
 
-<script src="/public/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>
