@@ -14,26 +14,22 @@ passport.use(
       callbackURL: "http://localhost:3001/google/callback",
       passReqToCallback: true,
     },
-    async function (req, res, accessToken, refreshToken, profile, done) {
-      try {
-        const userData = await User.findOne({
-          where: { email: profile.email },
+    async function (req, accessToken, refreshToken, profile, done) {
+      var userData = await User.findOne({
+        where: { email: profile.email },
+      });
+      if (!userData) {
+        userData = await User.create({
+          name: profile.displayName,
+          email: profile.email,
+          profile_pic: profile.picture,
         });
-        if (!userData) {
-          userData = await User.create({
-            name: profile.displayName,
-            email: profile.email,
-            profilePic: profile.picture,
-          });
-          console.log("New user created.");
-        }
-        console.log(userData);
-        console.log(profile.displayName);
-        console.log(profile.email);
-        return done(null, userData);
-      } catch (err) {
-        res.status(400).json(err);
+        console.log("New user created.");
       }
+      console.log(userData);
+      console.log(profile.displayName);
+      console.log(profile.email);
+      return done(null, userData);
     }
   )
 );
@@ -54,10 +50,6 @@ router.get("/", (req, res) => {
 
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect("/dashboard");
-    return;
-  }
   res.render("login");
   console.log(req.user);
 });
