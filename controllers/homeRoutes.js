@@ -32,7 +32,7 @@ passport.use(
         console.log(profile.email);
         return done(null, userData);
       } catch (err) {
-        res.status(400).json(err);
+        res.status(400).json(err).end();
       }
     }
   )

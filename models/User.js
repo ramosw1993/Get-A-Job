@@ -15,12 +15,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    current_job: {
+    currentJob: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "N/A",
     },
-    profile_pic: {
+    profilePic: {
       type: DataTypes.STRING,
       allowNull: false,
     },

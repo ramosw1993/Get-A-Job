@@ -8,19 +8,19 @@ router.get("/", withAuth, async (req, res) => {
       raw: true,
       nest: true,
       include: [
-        // {
-        //   model: Comment,
-        //   attributes: [
-        //     "id",
-        //     "description",
-        //     "date_created",
-        //     "user_id",
-        //     "post_id",
-        //   ],
-        // },
+        {
+          model: Comment,
+          attributes: [
+            "id",
+            "description",
+            "dateCreated",
+            "userId",
+            "postId",
+          ],
+        },
         {
           model: User,
-          attributes: ["name", "profile_pic", "current_job"],
+          attributes: ["name", "profilePic", "currentJob"],
         },
       ],
     });
@@ -29,7 +29,7 @@ router.get("/", withAuth, async (req, res) => {
 
     res.render("dashboard", {
       postData,
-      user_id: req.user.id,
+      userId: req.user.id,
     });
   } catch (err) {
     res.status(500).json(err);

@@ -11,7 +11,7 @@ router.get("/:id", withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["name", "profile_pic", "current_job"],
+          attributes: ["name", "profilePic", "currentJob"],
         },
       ],
     });
@@ -19,7 +19,7 @@ router.get("/:id", withAuth, async (req, res) => {
     res.render("postdetail", {
       userPosts,
 
-      user_id: req.user.id,
+      userId: req.user.id,
     });
   } catch (err) {
     res.status(400).json(err);
