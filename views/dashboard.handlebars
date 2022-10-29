@@ -5,7 +5,7 @@
     <br />
     <br />
     <h4 class="lead" id="dashboard-owner">Welcome, 
-      {{this.name}} Please fill out the form in order to create a post.</h4>
+      {{name}} Please fill out the form in order to create a post.</h4>
   </div>
 </div>
 <br />
@@ -45,8 +45,48 @@
   </div>
 </form>
 
-{{#each dashboard.post as |posts|}}
-{{>post-partial}}
+{{#each posts as |post|}}
+<div class="container">
+  <a href="/views/dashboard.handlebars/{{post.userId}}">
+  <div class="col-md-12 col-lg-12">
+    <article class="post vt-post">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+          <div class="post-type post-img">
+            <img
+              src="{{post.profilePic}}"
+              width="325"
+              class="img-responsive"
+              alt="image post"
+            />
+          </div>
+          <div class="author-info author-info-2">
+            <ul class="list-inline">
+              <li>
+                <div class="info" width="200">
+                  <p>Posted on:</p>
+                  <strong>{{post.dateCreated}}</strong></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+          <div class="caption">
+            <h3 class="md-heading"><a href="#">{{post.title}}</a></h3>
+            <p> {{post.description}} </p>
+            <a
+              class="btn btn-default"
+              href="../../controllers/postdetailRoutes.js/{{post.id}}"
+              role="button"
+            >Read More</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="clearfix"></div>
+  </div>
+  </a>
+</div>
 {{/each}}
 </section>
 
