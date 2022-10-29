@@ -3,12 +3,12 @@
         "title": "Looking For Job",
         "description": "I have experience with multipe shops, just looking to branch out to new options in Toronto",
         "pay": 27,
-        "user_id": 1
+        "userId": 1
     },
     {
         "title": "Apple",
         "description": "I worked at apple for 3 years and theyre HORRIBLE, horrible team management!! DO NOT work here",
         "pay": 20,
-        "user_id": 2
+        "userId": 2
     }
 ]
