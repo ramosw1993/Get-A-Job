@@ -7,10 +7,10 @@ router.get('/', async (req, res) => {
   const dashboardData = await Post.findAll({
     include: [
       {
-        model: Post,
+        model: User,
         attributes: [
-          'title',
-          'description'
+          'name',
+          'profilePic'
         ],
       },
     ],
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
   const posts = dashboardData.map((posts) =>
       posts.get({ plain: true }));
       console.log(posts);
-      res.render('dashboard', { posts, userId: req.user.id, });
+      res.render('dashboard', { posts });
 });
 
 // gets  one dashboard 
@@ -27,13 +27,13 @@ router.get("/dashboard/:id", withAuth, async (req, res) => {
     const dashboardData = await Post.findByPk(req.params.id, {
       include: [
         {
-          model: Post,
+          model: User,
           attributes: [
-            'title',
-            'description',
-            'dateCreated',
-            'pay',
-            'userId',
+            'name',
+            // 'description',
+            // 'dateCreated',
+            // 'pay',
+            // 'userId',
           ],
         },
         {

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment } = require("../../models/Post");
+const { User, Post, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // get one post
@@ -24,7 +24,7 @@ router.post("/", withAuth, async (req, res) => {
       description: req.body.description,
       pay: req.body.pay,
       dateCreated: req.body.dateCreated,
-      userId: req.session.userId,
+      userId: req.user.id,
     });
     res.status(200).json(createdPost);
   } catch (err) {
@@ -41,7 +41,7 @@ router.put('/:id', async (req,res) => {
       description: req.body.description,
       pay: req.body.pay,
       dateCreated: req.body.dateCreated,
-      userId: req.session.userId,
+      userId: req.user.id,
     },
     {
       where: {
@@ -62,7 +62,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.userId,
+        userId: req.user.id,
       },
     });
     if (!postData) {
