@@ -3,10 +3,9 @@ const { Post, User } = require("../models");
 const { findAll } = require("../models/User");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
-    const userPosts = await Post.findAll({
-      where: { user_id: req.user.id },
+    const userPosts = await Post.findByPk(req.params.id, {
       raw: true,
       nest: true,
       include: [
@@ -17,7 +16,7 @@ router.get("/", withAuth, async (req, res) => {
       ],
     });
     console.log(userPosts);
-    res.render("profile", {
+    res.render("postdetail", {
       userPosts,
 
       user_id: req.user.id,
