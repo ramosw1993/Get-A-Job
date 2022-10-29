@@ -14,6 +14,10 @@
           <div class="px-4 mt-1">
             <p class="fonts">View All My Posts!
             </p>
+            {{#if thisUser}}
+            <button id="editMenu">✎</button>
+            <div id="formHolder"></div>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -58,3 +62,7 @@
   </div>
 </div>
 {{/each}}
+
+<script>const userId = {{user_id}} </script>
+
+<script src="/js/editProfile.js"></script>

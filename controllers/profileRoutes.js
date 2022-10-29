@@ -17,9 +17,16 @@ router.get("/", withAuth, async (req, res) => {
       ],
     });
     console.log(userPosts);
+
+    if (userPosts[0].user_id === req.user.id) {
+      thisUser = true;
+    } else {
+      thisUser = false;
+    }
+
     res.render("profile", {
       userPosts,
-
+      thisUser,
       user_id: req.user.id,
     });
   } catch (err) {
@@ -29,6 +36,7 @@ router.get("/", withAuth, async (req, res) => {
 
 router.get("/:id", withAuth, async (req, res) => {
   try {
+    let thisUser;
     const userPosts = await Post.findAll({
       where: { user_id: req.params.id },
       raw: true,
@@ -41,9 +49,17 @@ router.get("/:id", withAuth, async (req, res) => {
       ],
     });
     console.log(userPosts);
+    if (userPosts[0].user_id === req.user.id) {
+      thisUser = true;
+    } else {
+      thisUser = false;
+    }
+
+    console.log(thisUser);
+
     res.render("profile", {
       userPosts,
-
+      thisUser,
       user_id: req.user.id,
     });
   } catch (err) {
