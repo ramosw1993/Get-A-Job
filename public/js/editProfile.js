@@ -36,7 +36,7 @@ async function editProfile(event) {
 
   const res = await fetch(`/api/users/edit/${userId}`, {
     method: "POST",
-    body: JSON.stringify({ current_job, profile_pic }),
+    body: JSON.stringify({ currentJob, profilePic }),
     headers: {
       "Content-Type": "application/json",
     },
