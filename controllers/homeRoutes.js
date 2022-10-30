@@ -69,6 +69,7 @@ router.get(
 
 router.get("/auth/failure", (req, res) => {
   res.send("something went wrong...");
+  return;
 });
 
 router.get("/auth", withAuth, (req, res) =>
