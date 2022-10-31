@@ -28,6 +28,10 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
