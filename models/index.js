@@ -1,7 +1,9 @@
+//define
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
 
+//define connections
 User.hasMany(Post, {
   foreignKey: "user_id",
   onDelete: "CASCADE",

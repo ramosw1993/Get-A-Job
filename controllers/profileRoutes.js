@@ -1,8 +1,10 @@
+//define
 const router = require("express").Router();
 const { Post, User } = require("../models");
 const { findAll } = require("../models/User");
 const withAuth = require("../utils/auth");
 
+//get profile
 router.get("/", withAuth, async (req, res) => {
   try {
     let thisUser;
@@ -34,6 +36,7 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+//get profile with posts by user id
 router.get("/:id", withAuth, async (req, res) => {
   try {
     let thisUser;

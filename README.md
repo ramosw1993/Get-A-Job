@@ -15,7 +15,7 @@ Get a Job is all about networking and creating opportunities for new employees a
 
 No installlation required! Just follow the link!
 
-Website link:
+Website link: https://get-a-job.herokuapp.com/
 
 ## Usage
 

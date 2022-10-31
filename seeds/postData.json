@@ -3,24 +3,28 @@
         "title": "Work at Home Canada Sales Advisor",
         "description": "Think about making a check list with all of the things that would make you feel good at work. Does your check list have meeting new people on it? How about being recognized and rewarded for doing great things? Maybe you pictured a place where you could have all of these things while making a positive difference in people’s day. If so, Concentrix is a great place for you. Every day we spread positivity through others' lives through compassionate customer interactions and genuine problem solving with a human touch. Doing right by people is in our DNA because we believe a desire to be treated with care and respect is a universal part of the human experience. This philosophy drives everything we do and creates the framework for how we treat our customers and our staff.",
         "pay": 27,
+        "city": "Toronto, ON",
         "user_id": 1
     },
     {
         "title": "Product Specialist",
         "description": " For over 30 years family owned and operated, Pride Marine Group has been creating personalized watercraft experiences. We don’t just sell boats—we help bring customer’s visions for a life well lived to reality by connecting them to the vessel that will take them where they want to go.",
         "pay": 20,
+        "city": "Windsor, ON",
         "user_id": 2
     },
     {
         "title": "Siemens Controls Programmer",
         "description": "AIS Technologies is currently recruiting a Siemens Controls Programmer. The successful candidate will experience a high energy, fast-paced work environment that is both competitive and rewarding. We are a growing company looking for someone who wants to join part of a growing team. AIS Technologies is a privately owned manufacturing corporation with headquarters in Windsor, Ontario. We engineer, manufacture and service complex plastic injection molds, sophisticated automation and secondary processing equipment, gauges and fixtures, and specialty machined components.",
         "pay": 37,
+        "city": "Kanloops, BC",
         "user_id": 3
     },
     {
         "title": "Customer Service and Sales",
         "description": "At TTEC, we’re all about the Human Experience. Elevated. As a Customer Service and Sales Representative working remotely in Canada you’ll be a part of creating and delivering amazing customer experiences while you also #ExperienceTTEC, an award-winning employment experience (including Great Place to Work® – Canada for a 2nd year in a row) and company culture. This position is open to residents of British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, Prince Edward Island, and Saskatchewan,",
         "pay": 40,
+        "city": "Toronto, ON",
         "user_id": 4
     }
 ]

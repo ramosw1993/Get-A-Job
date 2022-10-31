@@ -1,8 +1,10 @@
+{{!-- profile --}}
+{{!-- header --}}
 <div class="container mt-5">
   <div class="row d-flex justify-content-center">
     <div class="col-md-7">
       <div class="card-home p-3 py-4">
-        {{! orofile picture }}
+        {{! profile picture }}
         <div class="text-center">
           <img src="{{profile_pic}}" width="250" class="rounded-circle" />
         </div>
@@ -40,6 +42,7 @@
                 alt="image post"
               />
           </div>
+          
           <div class="author-info author-info-2">
             <ul class="list-inline">
               <li>
@@ -50,6 +53,7 @@
             </ul>
           </div>
         </div>
+
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
           <div class="caption">
             <h3 class="md-heading">{{title}}</h3>
@@ -64,6 +68,7 @@
 </div>
 {{/each}}
 
+{{!-- script --}}
 <script>const userId = {{user_id}} </script>
 
 <script src="/js/editProfile.js"></script>

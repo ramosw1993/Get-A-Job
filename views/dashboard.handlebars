@@ -1,3 +1,4 @@
+{{!-- title box --}}
 <div class="jumbotron jumbotron-fluid border border-info rounded-left p-3 mb-2 bg-light text-dark">
   <div class="container">
     <h1 class="display-5 fw-bolder d-flex justify-content-center">Get A Job</h1>
@@ -6,6 +7,8 @@
   </div>
 </div>
 <br />
+
+{{!-- input to make a post(form) --}}
 <form class="new-post">
   <div class="form-group">
     <label for="post-title">Title:</label>
@@ -17,6 +20,7 @@
       placeholder="Please enter the Title of the post."
     />
   </div>
+
   <div class="form-group">
     <label for="post-description">Description:</label>
     <input
@@ -27,17 +31,20 @@
       placeholder="Please enter a description."
     />
   </div>
+
   <div class="form-row">
     <div class="col">
       <label for="post-pay">Pay:</label>
       <input type="text" class="form-control" placeholder="Pay per hour" id="post-pay" name="post-pay"/>
     </div>
+
     <div class="col">
       <label for="post-city">Location:</label>
       <input type="text" class="form-control" placeholder="City, Province/State" id="post-city" name="post-city"/>
     </div>
   </div>
   <br>
+
   <div class="form-group row">
     <div class="col-sm-10">
       <button type="submit" class="btn btn-info" id="post-create">Create</button>
@@ -45,6 +52,7 @@
   </div>
 </form>
 
+{{!-- rendering all posts --}}
 {{#each postData}}
   <div class="container">
     <div class="col-md-12 col-lg-12">

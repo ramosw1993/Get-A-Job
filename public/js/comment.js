@@ -1,3 +1,4 @@
+//taking input from comment box and sending to handlers
 const commentHandler = async (event) => {
   event.preventDefault();
 

@@ -1,3 +1,4 @@
+//define
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
@@ -15,7 +16,7 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [10]
+        len: [10],
       },
     },
     date_created: {

@@ -1,3 +1,4 @@
+//define
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
@@ -47,27 +48,27 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 //update post
-router.put('/:id', async (req,res) => {
+router.put("/:id", async (req, res) => {
   try {
-  const post = await Post.update(
-    {
-    title: req.body.title,
-      description: req.body.description,
-      pay: req.body.pay,
-      city: req.body.pay,
-      dateCreated: req.body.dateCreated,
-      userId: req.user.id,
-    },
-    {
-      where: {
-        id: req.params.id,
+    const post = await Post.update(
+      {
+        title: req.body.title,
+        description: req.body.description,
+        pay: req.body.pay,
+        city: req.body.pay,
+        dateCreated: req.body.dateCreated,
+        userId: req.user.id,
       },
-    }
-  );
-  res.status(200).json(dish);
-} catch (err) {
-  res.status(500).json(err);
-}
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(dish);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //delete a post

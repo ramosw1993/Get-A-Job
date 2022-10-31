@@ -1,3 +1,4 @@
+//define
 const router = require("express").Router();
 var passport = require("passport");
 require("dotenv").config();
@@ -6,6 +7,7 @@ const { User } = require("../models");
 
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 
+//login using library
 passport.use(
   new GoogleStrategy(
     {
@@ -77,6 +79,11 @@ router.get("/logout", function (req, res, next) {
     }
     res.render("homepage");
   });
+});
+
+//not authorized page render
+router.get("/notauth", (req, res) => {
+  res.render("notauth");
 });
 
 module.exports = router;

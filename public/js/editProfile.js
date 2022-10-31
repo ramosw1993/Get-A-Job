@@ -1,3 +1,4 @@
+//create the edit profile inputs when button clicked
 function openMenu(event) {
   event.preventDefault();
 
