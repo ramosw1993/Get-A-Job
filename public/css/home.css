@@ -1,3 +1,9 @@
+* {
+  font-family: 'Oswald', 'Roboto', 'sans-serif';
+  letter-spacing: 1px;
+  font-size: auto;
+}
+
 body {
     margin-top:20px;
     background:#DCDCDC;
