@@ -79,4 +79,9 @@ router.get("/logout", function (req, res, next) {
   });
 });
 
+//not authorized page render
+router.get("/notauth", (req, res) => {
+  res.render("notauth");
+});
+
 module.exports = router;

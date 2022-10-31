@@ -1,5 +1,5 @@
 const withAuth = (req, res, next) => {
-  req.user ? next() : res.sendStatus(401);
+  req.user ? next() : res.redirect("/notauth");
 };
 
 module.exports = withAuth;
