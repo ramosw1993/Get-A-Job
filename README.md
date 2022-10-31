@@ -21,7 +21,7 @@ Website link:
 
 Once you navigate to the link you will be greeted with the home page.
 If not logged in yet log in to view jobs and more!
-![alt text](/imgs/homepg.PNG)
+![alt text](/public/imgs/homepg.PNG)
 
 Through your navigation bar:
 view your profile
@@ -29,11 +29,11 @@ view your profile
 
 Or:
 Make and view posts
-![alt text](/imgs/homepg.PNG)
+![alt text](/public/imgs/feedpg.PNG)
 
 ## Credits
 
-(#Collaborators:)
+Collaborators:
 
 Will: https://github.com/ramosw1993
 
@@ -41,7 +41,9 @@ Pak: https://github.com/paksin
 
 Hannah: https://github.com/hannahhue
 
-(#Sources:)
+Sources:
+
+Repo: https://github.com/ramosw1993/Get-A-Job
 
 Node.js library: https://www.passportjs.org/
 
