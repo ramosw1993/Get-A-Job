@@ -48,12 +48,6 @@ router.get("/", (req, res) => {
   res.render("homepage");
 });
 
-router.get("/login", (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  res.render("login");
-  console.log(req.user);
-});
-
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
