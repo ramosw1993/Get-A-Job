@@ -9,6 +9,10 @@ body {
     background:#DCDCDC;
 }
 
+.container {
+  padding-top: 0px;
+}
+
 .card-title-info {
     color: #4cc2c4;
     text-align: center;
