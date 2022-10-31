@@ -20,13 +20,10 @@ Website link:
 ## Usage
 
 Once you navigate to the link you will be greeted with the home page.
-![alt text](/imgs/homepg.PNG)
-
 If not logged in yet log in to view jobs and more!
 ![alt text](/imgs/homepg.PNG)
 
 Through your navigation bar:
-
 view your profile
 ![alt text](/public/imgs/profilepg.png)
 
