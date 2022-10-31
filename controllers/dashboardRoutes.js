@@ -8,16 +8,6 @@ router.get("/", withAuth, async (req, res) => {
       raw: true,
       nest: true,
       include: [
-        // {
-        //   model: Comment,
-        //   attributes: [
-        //     "id",
-        //     "description",
-        //     "date_created",
-        //     "user_id",
-        //     "post_id",
-        //   ],
-        // },
         {
           model: User,
           attributes: ["name", "profile_pic", "current_job"],
