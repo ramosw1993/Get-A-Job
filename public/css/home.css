@@ -1,14 +1,17 @@
+/* universal */
 * {
   font-family: 'Oswald', 'Roboto', 'sans-serif';
   letter-spacing: 1px;
   font-size: auto;
 }
 
+/* body */
 body {
     margin-top:20px;
     background:#DCDCDC;
 }
 
+/* info boxs */
 .container {
   padding-top: 0px;
 }
@@ -31,7 +34,7 @@ body {
     width: 100px;
 }
 
-/* CSS */
+/* signin btn */
 .button {
   margin-top: 10px;
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
@@ -63,10 +66,5 @@ body {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.card-google {
-    border-radius: 10%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    padding-bottom: 20px;
-}
 
 
