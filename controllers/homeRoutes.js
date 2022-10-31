@@ -45,15 +45,7 @@ passport.deserializeUser(function (user, done) {
 
 router.get("/", (req, res) => {
   // once opened render home
-  res.render("homepage", {
-    logged_in: req.session.logged_in,
-  });
-});
-
-router.get("/login", (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  res.render("login");
-  console.log(req.user);
+  res.render("homepage");
 });
 
 router.get(
@@ -83,7 +75,7 @@ router.get("/logout", function (req, res, next) {
     if (err) {
       return next(err);
     }
-    res.send("Goodbye");
+    res.render("homepage");
   });
 });
 

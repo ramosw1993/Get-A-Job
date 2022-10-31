@@ -54,6 +54,7 @@ router.put('/:id', async (req,res) => {
     title: req.body.title,
       description: req.body.description,
       pay: req.body.pay,
+      city: req.body.pay,
       dateCreated: req.body.dateCreated,
       userId: req.user.id,
     },
