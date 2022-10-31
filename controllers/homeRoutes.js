@@ -45,7 +45,9 @@ passport.deserializeUser(function (user, done) {
 
 router.get("/", (req, res) => {
   // once opened render home
-  res.render("homepage");
+  res.render("homepage", {
+    logged_in: req.session.logged_in,
+  });
 });
 
 router.get("/login", (req, res) => {

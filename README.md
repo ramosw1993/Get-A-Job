@@ -2,12 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Get a Job is all about networking and creating opportunities for new employees and or unemployeed people looking for a place to start. It allows users to create, and delete posts either looking for a job or reviewing a existing post. This will show future employees what to expect and provide a place to find hiring opportunities. Our motivation was to build something functional and easy for people of any tech background.
 
 ## Table of Contents (Optional)
 
@@ -25,25 +20,16 @@ Website link:
 ## Usage
 
 Once you navigate to the link you will be greeted with the home page.
-![alt text](assets/images/screenshot.png)
+If not logged in yet log in to view jobs and more!
+![alt text](/imgs/homepg.PNG)
 
 Through your navigation bar:
-
-If not logged in yet log in to view jobs and more!
-![alt text](assets/images/screenshot.png)
-
 view your profile
-![alt text](assets/images/screenshot.png)
+![alt text](/public/imgs/profilepg.png)
 
 Or:
-view posts
-![alt text](assets/images/screenshot.png)
-
-Make a post
-![alt text](assets/images/screenshot.png)
-
-filter exsisting posts
-![alt text](assets/images/screenshot.png)
+Make and view posts
+![alt text](/imgs/homepg.PNG)
 
 ## Credits
 
