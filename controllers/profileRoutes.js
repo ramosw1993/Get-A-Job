@@ -5,27 +5,27 @@ const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
   try {
-    const userPosts = await Post.findAll({
-      where: { user_id: req.user.id },
-      raw: true,
-      nest: true,
+    let thisUser;
+    const userData = await User.findByPk(req.user.id, {
       include: [
         {
-          model: User,
-          attributes: ["name", "profile_pic", "current_job"],
+          model: Post,
+          include: [User],
         },
       ],
     });
-    console.log(userPosts);
-
-    if (userPosts[0].user_id === req.user.id) {
+    console.log(userData);
+    if (userData.id === req.user.id) {
       thisUser = true;
     } else {
       thisUser = false;
     }
 
+    console.log(thisUser);
+    const user = userData.get({ plain: true });
+
     res.render("profile", {
-      userPosts,
+      ...user,
       thisUser,
       user_id: req.user.id,
     });
@@ -37,28 +37,26 @@ router.get("/", withAuth, async (req, res) => {
 router.get("/:id", withAuth, async (req, res) => {
   try {
     let thisUser;
-    const userPosts = await Post.findAll({
-      where: { user_id: req.params.id },
-      raw: true,
-      nest: true,
+    const userData = await User.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ["name", "profile_pic", "current_job"],
+          model: Post,
+          include: [User],
         },
       ],
     });
-    console.log(userPosts);
-    if (userPosts[0].user_id === req.user.id) {
+    console.log(userData);
+    if (userData.id === req.user.id) {
       thisUser = true;
     } else {
       thisUser = false;
     }
 
     console.log(thisUser);
+    const user = userData.get({ plain: true });
 
     res.render("profile", {
-      userPosts,
+      ...user,
       thisUser,
       user_id: req.user.id,
     });
