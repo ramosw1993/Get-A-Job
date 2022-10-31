@@ -23,7 +23,6 @@ router.get("/:id", withAuth, async (req, res) => {
     console.log(userPosts);
     res.render("postdetail", {
       ...userPosts,
-      user_id: req.user.id,
     });
   } catch (err) {
     res.status(400).json(err);
