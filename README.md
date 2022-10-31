@@ -25,7 +25,7 @@ If not logged in yet log in to view jobs and more!
 
 Through your navigation bar:
 view your profile
-![alt text](/public/imgs/profilepg.png)
+![alt text](/public/imgs/profilepg.PNG)
 
 Or:
 Make and view posts
