@@ -42,7 +42,7 @@
                 alt="image post"
               />
           </div>
-          
+
           <div class="author-info author-info-2">
             <ul class="list-inline">
               <li>
@@ -59,6 +59,8 @@
             <h3 class="md-heading">{{title}}</h3>
             <p> {{description}} </p>
             <a class="btn btn-default" href="/postdetail/{{id}}" role="button">Read More</a>
+            <a id="delete" class="btn btn-default" role="button">🗑</a>
+
           </div>
         </div>
       </div>
@@ -70,5 +72,5 @@
 
 {{!-- script --}}
 <script>const userId = {{user_id}} </script>
-
 <script src="/js/editProfile.js"></script>
+<script src="/js/delete.js"></script>
