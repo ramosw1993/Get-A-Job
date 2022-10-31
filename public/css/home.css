@@ -3,10 +3,6 @@ body {
     background:#DCDCDC;
 }
 
-.container {
-  padding-top: 0px;
-}
-
 .card-title-info {
     color: #4cc2c4;
     text-align: center;
@@ -27,6 +23,7 @@ body {
 
 /* CSS */
 .button {
+  margin-top: 10px;
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
   border: 0;
   border-radius: 12px;
