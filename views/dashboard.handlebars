@@ -1,10 +1,8 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid border border-info rounded-left p-3 mb-2 bg-light text-dark">
   <div class="container">
-    <h1 class="display-4">Get A Job</h1>
+    <h1 class="display-5 fw-bolder d-flex justify-content-center">Get A Job</h1>
     <br />
-    <br />
-    <h4 class="lead">Welcome,
-      {{this.user.name}}. Please fill out the form in order to create a post.</h4>
+    <h4 class="lead d-flex justify-content-center">Welcome, Please fill out the form in order to create a post.</h4>
   </div>
 </div>
 <br />
@@ -31,15 +29,18 @@
   </div>
   <div class="form-row">
     <div class="col">
+      <label for="post-pay">Pay:</label>
       <input type="text" class="form-control" placeholder="Pay per hour" id="post-pay" name="post-pay"/>
     </div>
     <div class="col">
+      <label for="post-city">Location:</label>
       <input type="text" class="form-control" placeholder="City, Province/State" id="post-city" name="post-city"/>
     </div>
   </div>
+  <br>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary" id="post-create">Create</button>
+      <button type="submit" class="btn btn-info" id="post-create">Create</button>
     </div>
   </div>
 </form>
