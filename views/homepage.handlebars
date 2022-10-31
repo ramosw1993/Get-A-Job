@@ -20,9 +20,40 @@
   </div>
 </section>
 
+{{!-- info cards --}}
+<div class="card-deck">
+  <div class="card">
+    <img src="/imgs/getstarted.png" id="info-img" class="card-img-top-center" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-info">Getting Started</h5>
+      <p class="card-text-info">View job postings with our feed. Get quick and easy results with a scroll and a click!</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/imgs/post.png" id="info-img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-info">Post and Review</h5>
+      <p class="card-text-info">See something you like? Read more with a click of a button and get access to more details, their profile or even leave a review of your own!</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/imgs/profile.png" id="info-img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-info">Custom Profiles</h5>
+      <p class="card-text-info">Manage your profile picture and view your post history! New job? Change your job title!</p>
+    </div>
+  </div>
+</div>
+
 {{!-- login will also apear here through homeroute --}}
 
-<h1>Sign in</h1>
-<a class="button google" href="/auth/google">Sign in with Google</a>
+<div class="card-google" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Sign In With Google</h5>
+    <a class="button google" href="/auth/google">Sign In</a>
+  </div>
+</div>
 
+{{!-- logging js --}}
 <script src="/js/login.js"></script>
+
