@@ -6,9 +6,9 @@
 }
 
 /* body */
-body {
+.body {
     margin-top:20px;
-    background:#DCDCDC;
+    background-color: #DFEEED;
 }
 
 /* info boxs */
