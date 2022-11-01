@@ -59,7 +59,9 @@
             <h3 class="md-heading">{{title}}</h3>
             <p> {{description}} </p>
             <a class="btn btn-default" href="/postdetail/{{id}}" role="button">Read More</a>
+            {{#if ../thisUser}}
             <button id="{{id}}" class="btn btn-default delete">🗑</button>
+            {{/if}}
           </div>
         </div>
       </div>

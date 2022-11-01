@@ -15,4 +15,6 @@ async function deletePost(event) {
 }
 
 //on click do function
-document.querySelectorAll(".delete").addEventListener("click", deletePost);
+[...document.querySelectorAll(".delete")].forEach((el) => {
+  el.addEventListener("click", deletePost);
+});
