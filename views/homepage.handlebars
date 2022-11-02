@@ -16,7 +16,11 @@
         <p class="lead">We want to help you find a job you love!</p>
         <p class="lead">Help contribute to our community by signing up and start
           your search!</p>
-        <a class="button google" href="/auth/google">Sign/Log In</a>
+        {{#if user}}
+          <h4>Welcome, {{user.name}}</h4>
+        {{else}}
+          <a class="button google" href="/auth/google">Sign/Log In</a>
+        {{/if}}
       </div>
     </div>
   </div>
