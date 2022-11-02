@@ -5,6 +5,11 @@
   font-size: auto;
 }
 
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
 /* body */
 .body {
     margin-top:20px;
